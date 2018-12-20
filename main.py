@@ -88,7 +88,8 @@ try:
     temp = float(args.temperature)
     s_answer = float(args.student_answer)
 except ValueError:
-    exit("invalid")
+    print("invalid")
+    exit(1)
 
 # Verify user can only supply valid units we support conversions for
 if source_unit and target_unit not in VALID_UNITS:
@@ -108,5 +109,7 @@ if source_unit == 'r':
 # The one's place and validate equality.
 if round(new_temp) == round(s_answer):
     print("Correct")
+    exit(0)
 else:
     print("Incorrect")
+    exit(1)
