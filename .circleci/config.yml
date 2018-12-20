@@ -12,3 +12,4 @@ jobs:
               . venv/bin/activate
               pip install -r requirements.txt
               python main.py -s f -t r 84.2 -a 543.5
+              python main.py -s c -t k -45.14 -a 227.51
